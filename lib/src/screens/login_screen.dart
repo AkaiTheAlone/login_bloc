@@ -6,8 +6,48 @@ class LoginScreen extends StatelessWidget {
       return Container(
         margin: EdgeInsets.all(20.0),
         child: Column(
-          children: [],
+          children: [
+            emailField(),
+            passwordField(),
+            Container(margin: EdgeInsets.only(top: 25.0)),
+            submitButton()
+          ],
         ),
       );
   }
+
+
+ Widget emailField(){
+      return TextField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        hintText: "your@gmail.com", 
+        labelText: "Email Address",  
+      ) ,
+  );
+      }
+
+  Widget passwordField(){
+      return TextField(
+        obscureText:true,
+        decoration: InputDecoration(
+        hintText: "password...", 
+        labelText: "Password", 
+            ),
+        );
+  }
+
+  Widget submitButton(){
+    return ElevatedButton(
+      onPressed: () {}, 
+      child: Text("Login"),
+      style: ButtonStyle(foregroundColor: WidgetStateProperty.all(Colors.green),
+      //style: ButtonStyle( foregroundColor: color), need to discover how to 
+      //change colors with elevated button, raised has been descontinued
+      ),
+      
+
+      );
+  }
+
 }

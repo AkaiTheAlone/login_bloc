@@ -4,7 +4,7 @@ import './screens/login_screen.dart';
 
 class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  build(context) {
     return MaterialApp(
       title: "Log Me In!",
       home: Scaffold(
